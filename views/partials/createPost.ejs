@@ -1,0 +1,58 @@
+<%- include("header.ejs") %>
+
+<main class="createPostContainer">
+    
+    <div class="form-container">
+        <div class="create-post-header">
+            <h2>Create A Post</h2>
+            <hr>
+        </div>
+        
+        <form id="postForm" action="/submit" method="post">
+            <ul>
+                <li>
+                    <label for="postTitle">Title:</label>
+                    <input type="text" name="postTitle" id="postTitle" maxlength="100" required placeholder="(Unique)">
+                </li>
+                <li>
+                    <label for="postAuthor">Authors:</label>
+                    <input type="text" id="authorInput" name="postAuthor" maxlength="50" required>
+                </li>
+                <li class="content-row">
+                    <label for="postContent">Content:</label>
+                    <textarea name="postContent" rows="12" cols="60" maxlength="1250" 
+                    placeholder="Tell us about your story.. (1250 characters)" required></textarea>
+                </li>
+                <li>
+                    <input type="submit" value="Create Post" class="submitBtn">
+                </li>
+            </ul>
+        </form>
+    </div>
+  
+    <div class="today-blog">
+        <div class="today-blog-top">
+            <h2>Today's Post</h2>
+            <hr>
+        </div>
+        <% if (posts && posts.length > 0) { %>
+            <div class="div-card">
+                <div class="div-card-header">
+                    <h3 class="blog-title"><%= random_post.title %></h3>
+                    <div class="blog-meta">
+                        <span class="blog-author">Authors: <%= random_post.authors %></span>
+                        <br>
+                        <span class="blog-date">Date: <%= random_post.date %></span>
+                    </div>
+                </div>
+                <div class="div-card-body">
+                    <br>
+                    <%= random_post.content %>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+</main>
+
+<%- include("footer.ejs") %>

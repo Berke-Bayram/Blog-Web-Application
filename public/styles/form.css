@@ -1,0 +1,53 @@
+.form-container {
+    padding-left: 1rem;
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.createPostContainer {
+    display: flex;
+}
+
+#postForm ul label {
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+#postForm ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#postForm ul li {
+    margin-bottom: 2rem;
+}
+
+#postForm ul li input {
+    font-size: 1.1rem;
+    background-color: #800020;
+    color: azure;
+}
+
+.blog-meta span {
+    font-weight: 900;
+}
+
+@media (max-width: 1250px) {
+    .createPostContainer {
+        flex-direction: column;
+    }
+
+    .today-blog {
+        margin-left: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width: 1250px) {
+    .createPostContainer {
+        height: 100vh;
+    } 
+}

@@ -1,0 +1,14 @@
+.returnContainer {
+    height: 100vh;
+}
+
+.return-div {
+    font-size: 1.5rem;
+    font-family: "DM Sans";
+    margin-left: 1rem;
+    font-weight: 900;
+}
+
+.return-div a {
+    color: #800220;
+}

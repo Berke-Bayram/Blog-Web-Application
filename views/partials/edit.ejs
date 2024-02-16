@@ -1,0 +1,35 @@
+<%- include("header.ejs") %>
+
+<main>
+    <div class="edit-container">
+        <div class="create-post-header">
+            <h2>Edit the Post</h2>
+            <hr>
+        </div>
+        
+        <form id="postForm" action="/save" method="post">
+            <ul>
+                <li>
+                    <label for="postTitle">Title:</label>
+                    <input type="text" name="postTitle" id="editTitle" maxlength="100" required placeholder="(Unique)">
+                </li>
+                <li>
+                    <label for="postAuthor">Authors:</label>
+                    <input type="text" id="authorInput" name="postAuthor" maxlength="50" required>
+                </li>
+                <li class="content-row">
+                    <label for="postContent">Content:</label>
+                    <textarea name="postContent" rows="12" cols="60" maxlength="1250" 
+                    placeholder="Tell us about your story.. (1250 characters)" required></textarea>
+                </li>
+                <li>
+                    <button type="submit" value="<%= editPost %>" name="submitBtn" id="changes">
+                        Save Changes
+                    </button>
+                </li>
+            </ul>
+        </form>
+    </div>
+</main>
+
+<%- include("footer.ejs") %>

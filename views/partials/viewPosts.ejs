@@ -1,0 +1,54 @@
+<%- include("header.ejs") %>
+
+<main class="viewPostsContainer">
+    <div class="postTitles">
+        <h2>The List of All Posts:</h2>
+        <ul id="titleList">
+            <% if(posts.length === 0) { %>
+                <p>No blogs to display.</p>
+            <% } %>
+            <% if (posts && posts.length > 0) { %>
+                <% posts.forEach(function(post) { %>
+                    <li>
+                    <a href="/view-post?title=<%= post.title %>" class="postTitle"><%= post.title %></a>
+                    </li>
+                <% }); %>
+            <% } %>
+        </ul>
+    </div>
+    
+    
+    <div class="selectedPosts">
+        <h2>Selected Post:</h2>
+        <hr>
+        <% if (selectedPost) { %>
+            <div class="div-card">
+                <div class="div-card-header">
+                    <h3 class="blog-title"><%= selectedPost.title %></h3>
+                    <div class="blog-meta">
+                        <span class="blog-author">Authors: <%= selectedPost.authors %></span>
+                        <br>
+                        <span class="blog-date">Date: <%= selectedPost.date %></span>
+                    </div>
+                </div>
+                <div class="div-card-body">
+                    <br>
+                    <%= selectedPost.content %>
+                </div>
+                <div class="div-card-footer edit-footer">
+                    <form action="/edit-menu" method="POST">
+                        <button class="btn-edit" value="<%= selectedPost.title %>" name="btnEdit">Edit</button>
+                    </form>
+                    <form action="/delete" method="POST">
+                        <button class="btn-delete" name="btnDelete" value="<%= selectedPost.title %>">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+</main>
+
+<%- include("footer.ejs") %>
+
+

@@ -1,0 +1,43 @@
+.viewPostsContainer {
+    display:flex;
+    height: 100vh;
+    font-size: 1.2rem;
+}
+
+.postTitles {
+    flex-basis: 32.5%;
+    margin-left: 1rem;
+    border-right: 3px dashed rgba(126, 8, 8, 0.5);;
+}
+
+.selectedPosts {
+    margin-left: 1rem;
+    flex-basis: 65%;
+}
+
+.postTitles ul {
+    margin: 0;
+    padding: 0;
+}
+
+.postTitles li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.postTitles li a {
+    color: #800020;
+    font-weight: 700;
+}
+
+@media (max-width: 1250px) {
+    .viewPostsContainer {
+        flex-direction: column;
+    }
+
+    .postTitles { 
+        border-right: none;
+    }
+}
+
+

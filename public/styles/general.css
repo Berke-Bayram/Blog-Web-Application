@@ -1,0 +1,106 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: #f5f5c6;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    margin-left: 0;
+    background-color: #800020;
+    height: 0.2rem; 
+}
+
+main {
+    font-family: "DM Sans";
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    height: 100vh;
+    font-size: 1.3rem;
+    max-width: 100%;
+    text-align: justify;
+    color: #800020;
+}
+
+.text-div {
+    width: 50%;
+    margin-left: 1rem;
+}
+
+.today-blog {
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+    flex-basis: 50%;
+}
+
+textarea {
+    resize: none;
+    background-color: #800020;
+    font-size: 1.1rem;
+    color: azure;
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+}
+
+.keyword {
+    display: inline-block;
+    background-color: #800020;
+    color: azure;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.div-card-footer {
+    margin-top: 1rem;
+}
+
+.div-card-footer button {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    background-color: #800020;
+    color: azure;
+    margin-bottom: 2rem;
+}
+
+.div-card {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.div-card-body {
+    padding-right: 2rem;
+}
+
+.edit-footer {
+    display: flex;
+}
+
+#changes {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    background-color: #800020;
+    color: azure;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .text-div {
+        width: 90%;
+    }
+}
+
+
+
+
+

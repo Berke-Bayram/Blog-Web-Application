@@ -1,0 +1,12 @@
+footer {
+    display:flex;
+    align-items: center;
+    background-color: #800020;
+    color: azure;
+    font-family: "Protest Strike";
+    font-size: x-large;
+    height: 3rem;
+    padding-left: 1rem;
+}
+
+
