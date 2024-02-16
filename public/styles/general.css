@@ -51,16 +51,6 @@ textarea {
     align-items: center;
 }
 
-.keyword {
-    display: inline-block;
-    background-color: #800020;
-    color: azure;
-    padding: 5px 10px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
 .div-card-footer {
     margin-top: 1rem;
 }
