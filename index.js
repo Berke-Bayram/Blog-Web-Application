@@ -34,22 +34,21 @@ app.get("/contact", (req, res) => {
 })
 
 app.post("/edit-menu", (req, res) => {
-    const editPost = req.body.btnEdit;
-    res.render("partials/edit.ejs", { editPost: editPost });
+    const editTitle = req.body.btnEdit;
+    res.render("partials/edit.ejs", { editTitle: editTitle });
 });
 
-app.post("/save", (req, res) => {
-    const titleExists = post_array.some(post => post.title === req.body['postTitle']);
+app.post("/edit", (req, res) => {
+    const existingPost = post_array.find(post => post.title === req.body.submitBtn);
+    const titleExists = post_array.some(post => post.title === req.body.postTitle);
     // Do not accept the new title if it already exists in another post
-    if (titleExists && (req.body.submitBtn !== req.body['postTitle'])) {
+    if (titleExists && (req.body.submitBtn !== req.body.postTitle)) {
         res.render("partials/return.ejs")
     }
     else {
-        const editedPostTitle = req.body.submitBtn;
-        const editedPost = post_array.find(post => post.title === editedPostTitle);
-        editedPost.authors = req.body['postAuthor'];
-        editedPost.title = req.body['postTitle'];
-        editedPost.content = req.body['postContent'];
+        existingPost.authors = req.body.postAuthor || existingPost.authors;
+        existingPost.title = req.body.postTitle || existingPost.title;
+        existingPost.content = req.body.postContent || existingPost.content;
         const selectedPost = post_array[0]
         const data = {
             posts: post_array,

@@ -1,5 +1,4 @@
 .contact-container {
-    height: 100vh;
     font-size: 1.2rem;
     font-weight: 700;
     padding-left: 1rem;
@@ -11,8 +10,3 @@
     color: #800020;
 }
 
-.edit-container {
-    margin-left: 1rem;
-    width: 50%;
-    height: 100vh;
-}

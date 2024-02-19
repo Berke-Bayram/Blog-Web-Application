@@ -1,12 +1,11 @@
+.createPostContainer {
+    display: flex;
+    min-height: 100vh;
+}
+
 .form-container {
     padding-left: 1rem;
     flex-basis: 40%;
-    display: flex;
-    flex-direction: column;
-}
-
-.createPostContainer {
-    display: flex;
 }
 
 #postForm ul label {
@@ -26,13 +25,22 @@
 }
 
 #postForm ul li input {
-    font-size: 1.1rem;
-    background-color: #800020;
+    font-size: 1.3rem;
+    background-color: #800220;
     color: azure;
 }
 
 .blog-meta span {
     font-weight: 900;
+}
+
+.edit-container {
+    margin-left: 1rem;
+    width: 50%;
+}
+
+.edit-footer {
+    display: flex;
 }
 
 @media (max-width: 1250px) {
@@ -44,10 +52,13 @@
         margin-left: 1rem;
         margin-bottom: 3rem;
     }
-}
 
-@media (min-width: 1250px) {
-    .createPostContainer {
-        height: 100vh;
-    } 
+    .form-container {
+        width: 90%;
+    }
+
+    .edit-container {
+        margin-left: 1rem;
+        width: 90%;
+    }
 }
