@@ -8,7 +8,7 @@ The application does not use a database; instead, posts are temporarily stored w
 - **Create Posts**: Users can create new posts with titles and content.
 - **Edit Posts**: Existing posts can be edited to update their titles and content.
 - **Remove Posts**: Users have the ability to delete posts they no longer want to keep.
-- **View Posts**: All posts can be viewed by users on the application's main page.
+- **View Posts**: All posts can be viewed by users.
 
 ## Technologies Used
 
